@@ -28,7 +28,8 @@ struct mahasiswa {
 }mhs;
 
 void menu(){
-    int input2;
+    cout << endl;
+    int input;
     utama2:
         cout<<"=== MENU PROGRAM ==="<<endl;
         cout<<"1. Tambah Data"<<endl;
@@ -36,8 +37,8 @@ void menu(){
         cout<<"3. Cek Data"<<endl;
         cout<<"4. Cetak Kartu"<<endl;
         cout<<"5. Exit"<<endl;
-        cout<<"Pilih : "; cin>>input2;
-        switch (input2){
+        cout<<"Pilih : "; cin>>input;
+        switch (input){
         case 1:
             tambahData();
             goto utama2;
@@ -47,11 +48,11 @@ void menu(){
             goto utama2;
             break;
         case 3:
-            caridata(input2);
+            caridata(input);
             goto utama2;
             break;
         case 4:
-            caridata(input2);
+            caridata(input);
             goto utama2;
             break;
         case 5:
@@ -61,6 +62,7 @@ void menu(){
 }
 
 void tambahData(){
+    cout << endl;
     datamhs++; int j = 0;
     cout << "Mahasiswa ke-" << datamhs << endl;
     cout << "Nama Mahasiswa: "; getline(cin,mhs.nama[datamhs-1]);
@@ -88,6 +90,7 @@ void tambahData(){
 }
 
 void displayData(){
+    cout << endl;
     cout << "==== Mahasiswa yang meminjam buku ======" << endl;
     for (int i = 0; i < datamhs; i++)
     {
@@ -125,6 +128,7 @@ int umur (string tgl){
 }
 
 void caridata(int input){
+    cout << endl;
     string carinama;
     cout<<"Input Nama : ";
     if (datamhs==datamhs){
